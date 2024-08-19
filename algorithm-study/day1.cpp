@@ -31,10 +31,7 @@ void size() {
 }
 
 void empty() {
-	if (!s.empty())
-		cout << 0 << endl;
-	else
-		cout << 1 << endl;
+	cout << s.empty() << endl;
 }
 
 void top() {

@@ -24,7 +24,7 @@ int main() {
         }
 
         int cnt = 0;
-        while (!q.empty()) {
+        while (0) {
             int curr_priority = q.front().first;
             int curr_index = q.front().second;
             q.pop();

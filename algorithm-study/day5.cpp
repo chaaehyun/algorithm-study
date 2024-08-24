@@ -1,5 +1,3 @@
-// 백준 1966번 프린터 큐
-
 //#include <iostream>
 //#include <queue>
 //

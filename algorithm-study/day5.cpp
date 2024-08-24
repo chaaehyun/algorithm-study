@@ -11,8 +11,8 @@
 //        int n, m;
 //        cin >> n >> m;
 //
-//        queue<pair<int, int>> q;  // (¹®¼­ Áß¿äµµ, ÀÎµ¦½º) ÀúÀå
-//        priority_queue<int> pq;   // ¹®¼­ Áß¿äµµ¸¸ ÀúÀå
+//        queue<pair<int, int>> q;  // (ë¬¸ì„œ ì¤‘ìš”ë„, ì¸ë±ìŠ¤) ì €ìž¥
+//        priority_queue<int> pq;   // ë¬¸ì„œ ì¤‘ìš”ë„ë§Œ ì €ìž¥
 //
 //        for (int i = 0; i < n; i++) {
 //            int priority;
@@ -27,12 +27,12 @@
 //            int curr_index = q.front().second;
 //            q.pop();
 //
-//            // °¡Àå ³ôÀº Áß¿äµµÀÇ ¹®¼­¿Í ÇöÀç ¹®¼­¸¦ ºñ±³
+//            // ê°€ìž¥ ë†’ì€ ì¤‘ìš”ë„ì˜ ë¬¸ì„œì™€ í˜„ìž¬ ë¬¸ì„œë¥¼ ë¹„êµ
 //            if (curr_priority == pq.top()) {
 //                pq.pop();
 //                cnt++;
 //
-//                // Ã£°íÀÚ ÇÏ´Â ¹®¼­ÀÇ ÀÎµ¦½º¿Í ÀÏÄ¡ÇÒ °æ¿ì
+//                // ì°¾ê³ ìž í•˜ëŠ” ë¬¸ì„œì˜ ì¸ë±ìŠ¤ì™€ ì¼ì¹˜í•  ê²½ìš°
 //                if (curr_index == m) {
 //                    cout << cnt << endl;
 //                    break;

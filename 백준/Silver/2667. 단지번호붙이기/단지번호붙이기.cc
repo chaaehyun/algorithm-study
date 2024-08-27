@@ -6,7 +6,6 @@
 using namespace std;
 
 int n;
-int temp;
 int map[26][26];
 vector<int> ans;
 bool visited[26][26] = { false };

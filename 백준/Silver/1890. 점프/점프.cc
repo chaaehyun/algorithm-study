@@ -5,23 +5,23 @@ using namespace std;
 
 int n;
 int path[101][101];
-long long dp[101][101];
+long long visited[101][101];
 
-void solve() {
-    dp[0][0] = 1;
+void dp() {
+    visited[0][0] = 1;
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            if (path[i][j] == 0 || dp[i][j] == 0) {
+            if (path[i][j] == 0 || visited[i][j] == 0) {
                 continue;
             }
 
             if (j + path[i][j] < n) {
-                dp[i][j + path[i][j]] += dp[i][j];
+                visited[i][j + path[i][j]] += visited[i][j];
             }
 
             if (i + path[i][j] < n) {
-                dp[i + path[i][j]][j] += dp[i][j];
+                visited[i + path[i][j]][j] += visited[i][j];
             }
         }
     }
@@ -36,9 +36,9 @@ int main() {
         }
     }
 
-    solve();
-    
-    cout << dp[n - 1][n - 1] << endl;
+    dp();
+
+    cout << visited[n - 1][n - 1] << endl;
 
     return 0;
 }

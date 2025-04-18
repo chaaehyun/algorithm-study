@@ -2,24 +2,16 @@ import java.util.*;
 
 public class Solution {
     public int[] solution(int []arr) {
-        Queue<Integer> queue = new LinkedList<>(); //큐는 LinkedList 형태임
+        Stack<Integer> stack = new Stack<>(); //큐와 달리 stack 형이 있음
         
-        if(arr.length != 0){
-            int prev = arr[0];
-            queue.offer(prev); //큐에 값 넣기
-            
-            for(int i=1; i<arr.length; i++){
-                if(arr[i] != prev){
-                    queue.offer(arr[i]);
-                    prev = arr[i];
-                }
-            }
+        for(int num : arr){
+            if(stack.isEmpty() || stack.peek() != num)
+                stack.push(num);
         }
         
-        int i = 0;
-        int[] answer = new int[queue.size()];
-        while(!queue.isEmpty()){
-            answer[i++] = queue.poll(); //C++과 다른 점, i++과 ++i의 차이
+        int []answer = new int[stack.size()];
+        for(int i=stack.size()-1; i>=0; i--){
+            answer[i] = stack.pop();
         }
 
         return answer;
